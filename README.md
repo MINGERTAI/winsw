@@ -18,6 +18,7 @@ WinSW wraps and manages any application as a Windows service.
 
 并在frp文件夹下创建一个winsw.xml配置文件，利用记事本编辑winsw.xml写入以下代码：
 
+```xml
 <service>
     <id>frpc</id>
     <name>frpc</name>
@@ -26,7 +27,7 @@ WinSW wraps and manages any application as a Windows service.
     <arguments>-c frpc.ini</arguments>
     <logmode>reset</logmode>
 </service>
-
+```
 管理员方式 运行终端 执行 winsw install，然后手动启动该服务即可
 
 winsw start 启动命令
