@@ -12,6 +12,32 @@ WinSW wraps and manages any application as a Windows service.
 
 **We are actively developing WinSW 3. Please refer to the [v2](https://github.com/winsw/winsw/tree/master) branch for previous version documentation.**
 
+## Frp 使用方法 windows客户端安装成系统服务
+
+下载winsw打包服务工具放到frpc.exe所在目录 
+
+并在frp文件夹下创建一个winsw.xml配置文件，利用记事本编辑winsw.xml写入以下代码：
+
+<service>
+    <id>frpc</id>
+    <name>frpc</name>
+    <description>用frps外网穿透客户端</description>
+    <executable>frpc</executable>
+    <arguments>-c frpc.ini</arguments>
+    <logmode>reset</logmode>
+</service>
+
+管理员方式 运行终端 执行 winsw install，然后手动启动该服务即可
+
+winsw start 启动命令
+
+winsw stop 停止命令
+
+服务安装命令：winsw.exe install
+
+服务卸载命令：winsw.exe uninstall
+
+
 ## Why?
 
 See the [project manifest](MANIFEST.md).
