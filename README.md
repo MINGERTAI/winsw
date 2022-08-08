@@ -28,6 +28,20 @@ WinSW wraps and manages any application as a Windows service.
     <logmode>reset</logmode>
 </service>
 ```
+
+```xml
+<service>
+  <id>frp</id>
+  <name>frp</name>
+  <description>用frps外网穿透客户端</description>
+  <executable>frpc.exe</executable>
+  <arguments>-c frpc.ini</arguments>
+  <onfailure action="restart" delay="60 sec"/>
+  <onfailure action="restart" delay="120 sec"/>
+  <logmode>reset</logmode>
+</service>
+```
+
 管理员方式 运行终端 执行 winsw install，然后手动启动该服务即可
 
 winsw start 启动命令
