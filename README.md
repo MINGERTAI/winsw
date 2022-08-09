@@ -48,6 +48,8 @@ winsw start 启动命令
 
 winsw stop 停止命令
 
+winsw restart 重新启动命令
+
 服务安装命令：winsw.exe install
 
 服务卸载命令：winsw.exe uninstall
